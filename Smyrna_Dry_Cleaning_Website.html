@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smyrna Dry Cleaning</title>
+    <style>
+        /* Modern CSS Reset and Variables */
+        :root {
+            --primary-color: #003366; /* Deep blue from the logo */
+            --secondary-color: #cc0000; /* Red from the logo */
+            --text-color: #333333;
+            --bg-color: #f8f9fa;
+            --white: #ffffff;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            line-height: 1.6;
+        }
+
+        /* Header Section */
+        header {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 30px 20px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            border-bottom: 5px solid var(--secondary-color);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 3em;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        header p {
+            margin: 10px 0 0 0;
+            font-size: 1.2em;
+            color: #e0e0e0;
+        }
+
+        /* Main Container Layout */
+        .container {
+            max-width: 1200px;
+            margin: 50px auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding: 0 20px;
+            gap: 40px;
+        }
+
+        /* Left Content: Services */
+        .content-left {
+            flex: 1;
+            min-width: 300px;
+            background: var(--white);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        .content-left h2 {
+            color: var(--primary-color);
+            border-bottom: 3px solid var(--secondary-color);
+            padding-bottom: 15px;
+            margin-top: 0;
+            font-size: 2em;
+        }
+
+        .services-list {
+            list-style: none;
+            padding: 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin-top: 25px;
+        }
+
+        .services-list li {
+            background: #f1f4f8;
+            padding: 15px 20px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 1.1em;
+            display: flex;
+            align-items: center;
+            transition: transform 0.2s ease, background 0.2s ease;
+        }
+
+        .services-list li:hover {
+            transform: translateX(5px);
+            background: #e2e8f0;
+            color: var(--primary-color);
+        }
+
+        .services-list li::before {
+            content: '✔';
+            color: var(--secondary-color);
+            margin-right: 12px;
+            font-size: 1.2em;
+        }
+
+        /* Right Content: Images */
+        .content-right {
+            flex: 0 0 400px;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            align-items: center;
+        }
+
+        .content-right img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+            transition: transform 0.3s ease;
+        }
+
+        .content-right img:hover {
+            transform: scale(1.02);
+        }
+
+        /* Footer Section */
+        footer {
+            background-color: #222;
+            color: var(--white);
+            padding: 50px 20px;
+            margin-top: 60px;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 30px;
+            text-align: center;
+        }
+
+        .contact-info h3 {
+            color: var(--secondary-color);
+            font-size: 1.8em;
+            margin-bottom: 20px;
+        }
+
+        .contact-info p {
+            margin: 10px 0;
+            font-size: 1.2em;
+        }
+
+        .contact-info a {
+            color: #66b3ff;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .contact-info a:hover {
+            color: var(--white);
+            text-decoration: underline;
+        }
+
+        .social-links {
+            margin-top: 30px;
+        }
+
+        .social-links a {
+            color: var(--white);
+            text-decoration: none;
+            margin: 10px;
+            font-size: 1.2em;
+            display: inline-block;
+            background: var(--primary-color);
+            padding: 12px 30px;
+            border-radius: 25px;
+            transition: background 0.3s, transform 0.2s;
+            font-weight: bold;
+        }
+
+        .social-links a:hover {
+            background: var(--secondary-color);
+            transform: translateY(-3px);
+        }
+
+        .qr-section {
+            margin-top: 20px;
+        }
+        
+        .qr-section img {
+            width: 120px;
+            border-radius: 10px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 900px) {
+            .container {
+                flex-direction: column;
+            }
+            .content-right {
+                flex-basis: auto;
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Smyrna Dry Cleaning</h1>
+        <p>Premium Garment Care & Alterations</p>
+    </header>
+
+    <div class="container">
+        <!-- Left Side: Services -->
+        <div class="content-left">
+            <h2>Our Services</h2>
+            <ul class="services-list">
+                <li>Dry Cleaning Service</li>
+                <li>Tailoring & Alterations</li>
+                <li>Wedding Gown Preservation</li>
+                <li>Monogramming</li>
+                <li>Men Suits</li>
+                <li>Dress</li>
+                <li>Drapes</li>
+                <li>Table Cover</li>
+                <li>Comforter</li>
+                <li>Laundry</li>
+                <li>Ironing</li>
+                <li>Stain Removal</li>
+                <li>Same Day Service</li>
+            </ul>
+        </div>
+
+        <!-- Right Side: Images -->
+        <div class="content-right">
+            <!-- Place your main logo here -->
+            <img src="right.jpeg" alt="Smyrna Dry Cleaning Logo">
+            <!-- Place your secondary image here -->
+            <img src="WhatsApp Image 2026-06-03 at 9.43.28 PM.jpeg" alt="Professional Dry Cleaning Suits">
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="contact-info">
+                <h3>Contact & Location</h3>
+                <p>📍 <strong>Address:</strong> 35S Lowry ST, Smyrna, TN 37167</p>
+                <p>📞 <strong>Phone:</strong> <a href="tel:6154593005">(615) 459-3005</a></p>
+                <p>💬 <strong>TXT:</strong> <a href="sms:6159350518">(615) 935-0518</a></p>
+                <p>✉️ <strong>Email:</strong> <a href="mailto:Smyrnadrycleaning1@gmail.com">Smyrnadrycleaning1@gmail.com</a></p>
+                
+                <div class="social-links">
+                    <a href="https://www.facebook.com/share/18y8sfqZmK/" target="_blank">Facebook</a>
+                    <a href="https://www.instagram.com/smyrnadrycleaning" target="_blank">Instagram</a>
+                </div>
+            </div>
+            
+            <div class="qr-section">
+                <p>Scan to connect:</p>
+                <img src="qr.jpeg" alt="QR Code">
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
